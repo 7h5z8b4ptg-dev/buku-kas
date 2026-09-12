@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Kas — Aplikasi Manajemen Keuangan Pribadi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-brand">
+      <div class="mark">BUKU KAS DIGITAL</div>
+      <h1>Kelola uangmu, tanpa ribet</h1>
+      <p>Aplikasi manajemen keuangan pribadi untuk mahasiswa</p>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="masuk">Masuk</button>
+      <button class="tab-btn" data-tab="daftar">Daftar</button>
+    </div>
+
+    <div id="form-masuk">
+      <div class="form-msg" id="msg-masuk"></div>
+      <div class="field"><label>Email</label><input type="email" id="login-email" placeholder="nama@kampus.ac.id"></div>
+      <div class="field"><label>Kata sandi</label><input type="password" id="login-password" placeholder="Kata sandi"></div>
+      <button class="btn btn-ink btn-block" id="btn-login">Masuk</button>
+      <div class="guest-row"><button class="btn btn-ghost" id="btn-guest">Coba tanpa akun</button></div>
+    </div>
+
+    <div id="form-daftar" style="display:none;">
+      <div class="form-msg" id="msg-daftar"></div>
+      <div class="field"><label>Nama lengkap</label><input type="text" id="reg-name" placeholder="Nama kamu"></div>
+      <div class="field"><label>Email</label><input type="email" id="reg-email" placeholder="nama@kampus.ac.id"></div>
+      <div class="field"><label>Kata sandi</label><input type="password" id="reg-password" placeholder="Minimal 6 karakter"></div>
+      <div class="field"><label>Konfirmasi kata sandi</label><input type="password" id="reg-password2" placeholder="Ulangi kata sandi"></div>
+      <button class="btn btn-ink btn-block" id="btn-register">Buat akun</button>
+    </div>
+  </div>
+</div>
+
+<div id="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mark">BUKU KAS</div>
+      <h1>Manajemen Keuangan</h1>
+      <p>Pribadi &amp; sederhana</p>
+    </div>
+    <ul class="nav-list">
+      <li><button class="nav-item" data-route="dashboard"><span class="icon">▦</span><span>Dashboard</span></button></li>
+      <li><button class="nav-item" data-route="income"><span class="icon">⊕</span><span>Pemasukan</span></button></li>
+      <li><button class="nav-item" data-route="expense"><span class="icon">⊖</span><span>Pengeluaran</span></button></li>
+      <li><button class="nav-item" data-route="history"><span class="icon">☷</span><span>Riwayat Transaksi</span></button></li>
+    </ul>
+    <div class="sidebar-bottom">
+      <div class="user-chip">Masuk sebagai<strong id="user-name-label">Tamu</strong></div>
+      <button class="logout-btn" id="btn-logout">↪ Keluar</button>
+    </div>
+  </aside>
+  <main class="content" id="content"></main>
+</div>
+
+<script src="script.js"></script>
+</body>
